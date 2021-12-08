@@ -11,7 +11,7 @@ A simple CLI calculator
 
 ## Instructions
 
-If you dont have/want `nearleyc` installed on your system, use the [compiled branch](/tree/compiled).
+If you dont have/want `nearleyc` installed on your system, use the [compiled branch](https://github.com/SimonFJ20/calculator-with-nearley/tree/compiled).
 
 1. Clone repo
 
