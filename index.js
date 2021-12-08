@@ -1,17 +1,22 @@
 const nearley = require('nearley');
 const grammar = require('./grammar');
-const prompt = require('prompt-async');
+const prompt = require('prompt-sync')();
 
+const input = (prefix) => {
+    return new Promise((resolve, reject) => {
+        const text = prompt(prefix);
+        if (typeof text !== 'string')
+            reject(new Error('canceled'));
+        else
+            resolve(text);
+    })
+}
 
 const main = async () => {
 
-    prompt.start();
-    prompt.message = '';
-    prompt.delimiter = '→';
-
     while (true) {
         const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar));
-        const {question: text} = await prompt.get({message: 'crackulator'});
+        const text = await input('crackulator → ');        
         parser.feed(text);
         console.log(parser.results[0]);
     }
