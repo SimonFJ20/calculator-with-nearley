@@ -1,0 +1,14 @@
+{
+  "name": "testlang",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "nearleyc grammar.ne -o grammar.js"
+  },
+  "dependencies": {
+    "moo": "^0.5.1",
+    "nearley": "^2.20.1",
+    "prompt-async": "^0.9.9"
+  }
+}
