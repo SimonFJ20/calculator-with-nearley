@@ -2,8 +2,11 @@
   "name": "testlang",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "git@github.com:SimonFJ20/calculator-with-nearley.git",
+  "author": "SimonFJ20 <simonfromjakobsen@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node .",
     "build": "nearleyc grammar.ne -o grammar.js"
   },
   "dependencies": {
