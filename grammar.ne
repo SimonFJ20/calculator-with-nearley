@@ -65,7 +65,8 @@ _           ->  %WS:*
     const builtInFuncs = {
         "exit": () => process.exit(0),
         "sqrt": (v) => Math.sqrt(v),
-        "sum": (a, b) => a + b,
+        "sum": (...vs) => vs.reduce((p, c) => p + c),
+        "root": (a, n) => a ** (1 / n),
     };
 
     const execFunc = (name, args) => {
